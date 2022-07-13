@@ -17,17 +17,17 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "",
-            "index": "/denthegreek.github.io/src/index.html",
-            "main": "/denthegreek.github.io/src/main.ts",
-            "polyfills": "/denthegreek.github.io/src/polyfills.ts",
-            "tsConfig": "/denthegreek.github.io/tsconfig.app.json",
+            "outputPath": "docs",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.app.json",
             "assets": [
-              "/denthegreek.github.io/src/favicon.ico",
-              "/denthegreek.github.io/src/assets"
+              "src/favicon.ico",
+              "src/assets"
             ],
             "styles": [
-              "/denthegreek.github.io/src/styles.css"
+              "src/styles.css"
             ],
             "scripts": []
           },
