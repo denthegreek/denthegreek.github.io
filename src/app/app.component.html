@@ -1,1 +1,281 @@
-<p>Hello world!</p>
+<div style="position: absolute;top: 0;left: 0; width:100%;height: 100%;background-color:{{whiteMode['background']}};color:{{whiteMode['text']}};padding: 0;margin: 0;">
+	<div class="rgbLight" style="width:100%; text-align: center;background: rgb(34,1,51);background: {{whiteMode['gradBckgrnd1']}};background: {{whiteMode['gradBckgrnd2']}};">
+		<img src="{{assetsPath}}assets/DNlogo.png" class="topLogo">
+	</div>
+	<div id="menuBar" style="width: 100%;text-align: left;box-sizing: border-box;padding-top: 12px;position: relative;height:70px;overflow-x: hidden;">
+		<div id="home" class="activeCircle" (click)="navClick('home')" (mouseenter)="navigateInfoChanger('// home')"  (mouseleave)="navigateInfoChanger('')" style="margin-left: 15px;float: left;"> 
+			<img src="{{assetsPath}}assets/home.png" style="position: relative; width:25px;padding-top: 5px;padding-left: 5px;">
+		</div>
+		<div id="about me" class="circle" (click)="navClick('about me')" (mouseenter)="navigateInfoChanger('// about me')" (mouseleave)="navigateInfoChanger('')" style="margin-left: 15px;float: left;"> 
+			<img src="{{assetsPath}}assets/aboutMe.png" style="position: relative; width:25px;padding-top: 5px;padding-left: 5px;">
+		</div>
+		<div id="videos" class="circle" (click)="navClick('videos')" (mouseenter)="navigateInfoChanger('// videos')" (mouseleave)="navigateInfoChanger('')" style="margin-left: 15px;float: left;"> 
+			<img src="{{assetsPath}}assets/video.png" style="position: relative; width:25px;padding-top: 5px;padding-left: 5px;">
+		</div>
+		<div id="code" class="circle" (click)="navClick('code')" (mouseenter)="navigateInfoChanger('// code')" (mouseleave)="navigateInfoChanger('')" style="margin-left: 15px;float: left;"> 
+			<img src="{{assetsPath}}assets/code.png" style="position: relative; width:25px;padding-top: 5px;padding-left: 5px;">
+		</div>
+		<div id="position" class="position" style="height: 40px;display: inline-block;transition: color 0.25s;">
+			<div style="display: inline-block;margin: 0;">{{navInfo}}</div>
+		</div>
+	</div>
+	<!-- home -->
+	<div *ngIf="activeInfo == '// home'" id="homeContainer" class="mainContainer" style="text-align:center;">
+		<div class="showIfBigScreen">
+			<div id="leftContainer" class="showIfBigScreen" style="display:inline-block;float: left;width:25vw;min-height:70vh;">
+				
+			</div>
+			<div id="centerContainer" style="display:inline-block;width:50vw;min-height:70vh;">
+				<p style="margin: 0;padding: 0;">Welcome to ΔΝ evelopment Studio!</p>
+				<p style="font-size: 50%;margin: 0;padding: 0;">I am Dimostenis Nikolakopoulos and this is my website.</p>
+			</div>
+			<div id="rightContainer" class="showIfBigScreen" style="animation: smooth_in 2s;white-space: break-spaces;display:inline-block;float: right;width:23vw;min-height:70vh;">
+				<div style="width:100%;">
+					<img src="{{assetsPath}}assets/profile.jpg" style="width:20vh;height:20vh;background-color: #1CC3E2;border-radius: 50%;">
+				</div>
+				<a (mouseenter)="currentSocialMedia='// Github //';" (mouseleave)="currentSocialMedia='';" style="width:100%;color: purple;margin-right: 1vw;" target="_blank" href="https://github.com/denthegreek?tab=repositories">
+					<img style="height: 2vw;" src="{{assetsPath}}assets/social/github_logo.png">
+				</a>
+				<a (mouseenter)="currentSocialMedia='// YouTube //';" (mouseleave)="currentSocialMedia='';" style="width:100%;color: purple;margin-right: 1vw;" target="_blank"href="https://www.youtube.com/channel/UCrXUptg1qQ9styLQZJK_zNQ">
+					<img style="height: 2vw;" src="{{assetsPath}}assets/social/youtube_logo.png">
+				</a>
+				<a (mouseenter)="currentSocialMedia='// LinkedIn //';" (mouseleave)="currentSocialMedia='';" style="width:100%;color: purple;margin-right: 1vw;" target="_blank"href="https://www.linkedin.com/in/dimos-nikolakopoulos">
+					<img style="height: 2vw;" src="{{assetsPath}}assets/social/linkedin_logo.png"> 
+				</a>
+				<img (mouseenter)="currentSocialMedia='// About Me //';" (mouseleave)="currentSocialMedia='';" (click)="navClick('about me')" style="height: 2vw;cursor: pointer;" src="{{assetsPath}}assets/aboutMe.png">
+				<p style="font-size: 70%;padding: 0;margin-top:5px;height:20px;">{{currentSocialMedia}}</p>
+			</div>
+		</div>
+		<div id="mobileContainer" class="showIfSmallScreen" style="animation: smooth_in 2s;font-size: 5vh;white-space: break-spaces;display:inline-block;float: right;width:100%;min-height:70vh;">
+			<div style="width:100%;">
+				<img src="{{assetsPath}}assets/profile.jpg" style="width:20vh;height:20vh;background-color: #1CC3E2;border-radius: 50%;">
+			</div>
+			<a (mouseenter)="currentSocialMedia='// Github //';" (mouseleave)="currentSocialMedia='';" style="width:100%;color: purple;margin-right: 2vh;" target="_blank" href="https://github.com/denthegreek?tab=repositories">
+				<img style="height: 5vh;" src="{{assetsPath}}assets/social/github_logo.png">
+			</a>
+			<a (mouseenter)="currentSocialMedia='// YouTube //';" (mouseleave)="currentSocialMedia='';" style="width:100%;color: purple;margin-right: 2vh;" target="_blank"href="https://www.youtube.com/channel/UCrXUptg1qQ9styLQZJK_zNQ">
+				<img style="height: 5vh;" src="{{assetsPath}}assets/social/youtube_logo.png">
+			</a>
+			<a (mouseenter)="currentSocialMedia='// LinkedIn //';" (mouseleave)="currentSocialMedia='';" style="width:100%;color: purple;margin-right: 2vh;" target="_blank"href="https://www.linkedin.com/in/dimos-nikolakopoulos">
+				<img style="height: 5vh;" src="{{assetsPath}}assets/social/linkedin_logo.png"> 
+			</a>
+			<img (mouseenter)="currentSocialMedia='// About Me //';" (mouseleave)="currentSocialMedia='';" (click)="navClick('about me')" style="height: 5vh;cursor: pointer;" src="{{assetsPath}}assets/aboutMe.png">
+			<p style="padding: 0;margin: 0;">Welcome to ΔΝ Development Studio!</p>
+			<p style="font-size:50%;padding: 0;margin: 0;">I am Dimostenis Nikolakopoulos and this is my website.</p>
+			<img *ngIf="activeInfo == '// home'" src="{{assetsPath}}assets/dnLogoPurpleBckg.png" style="animation: smooth_in 2s;width:20vh;height:20vh;border-radius: 50%;margin-top: 2vh;">
+		</div>
+	</div>
+	<img *ngIf="activeInfo == '// home'" class="showIfBigScreen" src="{{assetsPath}}assets/dnLogoPurpleBckg.png" style="animation: smooth_in 2s;width:50vh;height:50vh;border-radius: 50%;position: absolute;top:30vh;left:calc(( 100vw - 50vh) / 2 );opacity: 1;z-index: 0;">
+	<!-- about me -->
+	<div *ngIf="activeInfo == '// about me'" id="aboutMeContainer" style="width:100vw;z-index: 2;">
+		<p class="showIfBigScreen" style="margin: 0 0 0 0;font-size: 2vw;position: relative;width: 100vw;text-align: center;margin-top:calc((15vh - 4vw)/2);">// {{aboutMeCategories[scrollCount]}} //</p>
+		<div id="aboutMePanel" class="aboutMeSlider">
+			<p class="showIfSmallScreen" style="text-align: center;width:100%;font-size: 5vw;">// {{aboutMeCategories[0]}} //</p>
+			<div class="aboutmeCard">
+				<div style="background-image: url('{{assetsPath}}assets/cardBackground.png');background-position: center;background-size: contain;height: 25.1%;background-repeat: no-repeat;">
+					<img src="{{assetsPath}}assets/dnCard.png" style="width:100%;height: 100%;background-repeat: no-repeat;">
+				</div>
+				<div style="width: 100%;">
+					<p style="width: 80%;margin-left: 10%;margin-right: 10%;text-align: center;padding: 1vw 1vw 1vw 1vw;box-sizing: border-box;">
+						An effort started, on the summer of 2022, to brand my code and videos. It was a measure necessary to consistently showcase my material. Thus, ΔΝ Dev Studios came to existance. Delta Nhi are the initials of my name in greek.<br>(Δημοσθένης Νικολακόπουλος)<br>My main goal is to show others pieces of my code, to give people inspiration from my own work.
+					</p>
+				</div>
+			</div>
+			<div class="aboutmeCard">
+				<div style="background-image: url('{{assetsPath}}assets/cardBackground.png');background-position: center;background-size: contain;height: 25.1%;background-repeat: no-repeat;">
+					<img src="{{assetsPath}}assets/njit.png" style="width:100%;height: 100%;background-repeat: no-repeat;">
+				</div>
+				<div style="width: 100%;">
+					<p style="width: 80%;margin-left: 10%;margin-right: 10%;text-align: center;padding: 1vw 1vw 1vw 1vw;box-sizing: border-box;">
+						I graduated with a Bachelors of Science deggree in Computer Science, on May 2021, from NJIT.<br><br><br>While I was still attending classes, I already had decided to follow a web developers career. Hence, I took courses towards that career path and I managed to ace most of them.
+					</p>
+				</div>
+			</div>
+			<div class="aboutmeCard">
+				<div style="background-image: url('{{assetsPath}}assets/cardBackground.png');background-position: center;background-size: contain;height: 25.1%;background-repeat: no-repeat;">
+					<img src="{{assetsPath}}assets/army.png" style="width:100%;height: 100%;background-repeat: no-repeat;">
+				</div>
+				<div style="width: 100%;">
+					<p style="width: 80%;margin-left: 10%;margin-right: 10%;text-align: center;padding: 1vw 1vw 1vw 1vw;box-sizing: border-box;">
+						I served as an officer (Second Lieutanent) in the Greek Military, which is a NATO army with modern equipment. I was in charge of the Tech Department of the XXV Armored Brigade, and later on, of the IV Infantry Division. (Officer Director of Research & Computing) I commanded soldiers specialized on Server Handling and Website Deployment. Additionally, we were responsible for all IT related maintanace and handling.
+					</p>
+				</div>
+			</div>
+			<p class="showIfSmallScreen" style="text-align: center;width:100%;font-size: 5vw;border-top: 2px solid purple;padding-top: 10px;">// {{aboutMeCategories[1]}} //</p>
+			<div class="aboutmeCard">
+				<div style="background-image: url('{{assetsPath}}assets/cardBackground.png');background-position: center;background-size: contain;height: 25.1%;background-repeat: no-repeat;">
+					<img src="{{assetsPath}}assets/armyWork.png" style="width:100%;height: 100%;background-repeat: no-repeat;">
+				</div>
+				<div style="width: 100%;">
+					<p style="width: 100%;text-align: center;font-size: 110%;margin: 0;padding: 2vw 1vw 0;box-sizing: border-box;">
+						Officer Director of the Brigade’s Computing Department (Second Lieutenant)<br>
+						<span style="color: #73569c;">March 2021 – May 2022</span>
+					</p>
+					<p style="width: 100%;text-align: center;font-size: 120%;padding: 0 1vw 1vw;box-sizing: border-box;color: #8C62F1;">
+						Coordinating specialized personel.<br>
+						Windows Server Administrator<br>
+						IT Support<br>
+						Bilingual Communication<br>
+						Web Design
+					</p>
+				</div>
+			</div>
+			<div  class="aboutmeCard">
+				<div style="background-image: url('{{assetsPath}}assets/cardBackground.png');background-position: center;background-size: contain;height: 25.1%;background-repeat: no-repeat;">
+					<img src="{{assetsPath}}assets/oneNineAI.png" style="width:100%;height: 100%;background-repeat: no-repeat;">
+				</div>
+				<div style="width: 100%;">
+					<p style="width: 100%;text-align: center;font-size: 110%;margin: 0;padding: 2vw 1vw 0;box-sizing: border-box;">
+						Front-end Web Developer<br>
+						<span style="color: #73569c;">August 2020 – December 2020<br>Newark, NJ, USA</span>
+					</p>
+					<p style="width: 100%;text-align: center;font-size: 120%;padding: 0;box-sizing: border-box;color: #8C62F1;">
+						HTML<br>
+						Python<br>
+						Django<br>
+						JavaScript<br>
+						Red Hat Linux<br>
+						Shell Script
+					</p>
+				</div>
+			</div>
+			<div class="aboutmeCard">
+				<div style="background-image: url('{{assetsPath}}assets/cardBackground.png');background-position: center;background-size: contain;height: 25.1%;background-repeat: no-repeat;">
+					<img src="{{assetsPath}}assets/amazon.png" style="width:100%;height: 100%;background-repeat: no-repeat;">
+				</div>
+				<div style="width: 100%;">
+					<p style="width: 100%;text-align: center;font-size: 110%;margin: 0;padding: 2vw 1vw 0;box-sizing: border-box;">
+						Associate<br>
+						<span style="color: #73569c;">September 2019 – January 2020<br>Edison, NJ, USA</span>
+					</p>
+					<p style="width: 100%;text-align: center;font-size: 120%;padding: 0;box-sizing: border-box;color: #8C62F1;">
+						Organizing inventory, as a member of a team trained to handle expensive and modern robotic technology.<br><br>
+						AWS Technology
+					</p>
+				</div>
+			</div>
+			<p class="showIfSmallScreen" style="text-align: center;width:100%;font-size: 5vw;border-top: 2px solid purple;padding-top: 10px;">// {{aboutMeCategories[2]}} //</p>
+			<div class="aboutmeCard">
+				<div style="background-image: url('{{assetsPath}}assets/cardBackground.png');background-position: center;background-size: contain;height: 25.1%;background-repeat: no-repeat;">
+					<img src="{{assetsPath}}assets/myStory.png" style="width:100%;height: 100%;background-repeat: no-repeat;">
+				</div>
+				<div style="width: 100%;">
+					<p style="width: 80%;margin-left: 10%;margin-right: 10%;text-align: center;padding: 0 1vw 1vw;box-sizing: border-box;">
+					I was born an American Citizen; although, my parents who had Greek origins moved us back to Greece. Therefore, I was raised overseas, only to return at the age of 18, at 2011. As my parents did not ever attend a college, I made entirely my own new footsteps. I studied, worked, and lived in the US, until I decided to complete a term of military servicce in the Greek Army. (2021-2022) <br>Afterwards, I returned to the US to continue my career.
+				</p>
+				</div>
+			</div>
+			<div class="aboutmeCard">
+				<div style="background-image: url('{{assetsPath}}assets/cardBackground.png');background-position: center;background-size: contain;height: 25.1%;background-repeat: no-repeat;">
+					<img src="{{assetsPath}}assets/contactMe.png" style="width:100%;height: 100%;background-repeat: no-repeat;">
+				</div>
+				<div style="width: 100%;">
+					<p style="width: 45%;text-align: left;padding: 2.5vw 2vw 1vw ;box-sizing: border-box;display: inline-block;float: left;">surname:<br><br>last name:<br><br>email:<br><br>Mail Addr.:</p>
+					<p style="width: 55%;text-align: left;padding: 2.5vw 0 1vw ;box-sizing: border-box;display: inline-block;float: right;color: #8C62F1;">Dimostenis<br><br>Nikolakopoulos<br><br>dnikolas1993@yahoo.com<br><br>PO BOX 118, Bayonne, NJ</p>
+					<p style="width: 100%;text-align: center;padding: 0;box-sizing: border-box;margin: 0;font-size: 80%;">more information only through email</p>
+				</div>
+			</div>
+			<div class="aboutmeCard">
+				<div style="background-image: url('{{assetsPath}}assets/cardBackground.png');background-position: center;background-size: contain;height: 25.1%;background-repeat: no-repeat;">
+					<img src="{{assetsPath}}assets/programmingSkills.png" style="width:100%;height: 100%;background-repeat: no-repeat;">
+				</div>
+				<div style="width: 100%;">
+					<p style="width: 100%;text-align: center;padding-top: 2vw;box-sizing: border-box;margin: 0;">LANGUAGES</p>
+					<p style="width: 80%;margin-left: 10%;margin-right: 10%;text-align: center;padding: 0 1vw 0.5vw ;box-sizing: border-box;color: #8C62F1;font-size: 1.1;">HTML<br>Javascript & Typescript<br>PHP<br>SQL<br>Python</p>
+					<p style="width: 100%;text-align: center;padding: 0;box-sizing: border-box;margin: 0;">FRAMEWORKS</p>
+					<p style="width: 80%;margin-left: 10%;margin-right: 10%;text-align: center;padding: 0 1vw 0.5vw ;box-sizing: border-box;color: #8C62F1;font-size: 1.1;">Angular<br>Django</p>
+				</div>
+			</div>
+		</div>
+		<div class="showIfBigScreen" style="width:100vw;bottom: 0;text-align: center;margin-top: 10px;">
+			<div *ngIf="scrollCount>0" style="display: inline-block;"><img src="{{assetsPath}}assets/leftArrow.png" class="arrowBtn" (click)="aboutMeMovement('left')"></div>
+			<div *ngIf="scrollCount<2" style="display: inline-block;"><img src="{{assetsPath}}assets/rightArrow.png" class="arrowBtn" (click)="aboutMeMovement('right')"> </div>
+		</div>
+		<div class="showIfSmallScreen" style="width:100%;text-align: center;padding: 0.5vh 0 0.5vh;background-color: #8C62F1;color:#fff;font-size: 5vw;box-sizing: border-box;border-top-left-radius: 20px;border-top-right-radius: 20px;" (click)="scrollTop()">
+			<p>&uarr; BACK TO TOP &uarr;</p>
+		</div>
+	</div>
+	<!-- video -->
+	<div *ngIf="activeInfo == '// videos'" id="videoContainer" class="mainContainer" style="text-align:center;">
+		<p style="margin: 0;padding: 0;font-size: 40%;">Current Video Selection</p>
+		<p class="showIfBigScreen" style="margin: 0;padding: 0;">// {{currentVideo}} //</p>
+		<p class="showIfSmallScreen" style="margin: 0;padding: 0;font-size: 7vw;">// {{currentVideo}} //</p>
+		<div class="mediaContainer" style="position: relative;">
+			<iframe id="youtubePlayer" class="mediaPlayer" style="background-color: rgba(13, 0, 31, 1);padding: 2vw 2vw 2vw;border-radius: 20px;box-shadow: 0 0 2vw 0 #b300ff;margin-top: 2vw;"  src="https://www.youtube.com/embed/YrigaGXr--E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+		<div style="width:100%;text-align: center;margin-top: 2vh;padding-bottom: 2vh;">
+			<div class="videoObjects" (click)="changeVideoSource('https://www.youtube.com/embed/YrigaGXr--E','Stohos Shooting Club')"> 
+				<img class="showIfBigScreen" src="{{assetsPath}}assets/github/stohos_logo.png" style="width:7vh;">
+				<img class="showIfSmallScreen" src="{{assetsPath}}assets/github/stohos_logo.png" style="width:28vw;">
+			</div>
+			<div class="videoObjects" (click)="changeVideoSource('https://www.youtube.com/embed/kT4uMlV05Cw','Task Manager')"> 
+				<img class="showIfBigScreen" src="{{assetsPath}}assets/github/taskManager_logo.png" style="width:7vh;">
+				<img class="showIfSmallScreen" src="{{assetsPath}}assets/github/taskManager_logo.png" style="width:28vw;">
+			</div>
+		</div>
+		<p style="margin: 0;padding: 0;font-size: 35%;white-space: pre-wrap;">I invite you to take a look on my YouTube channel.<br>There, you will find my demonstrations, along with tutorials that I have created. Please, consider subscribing to my channel and giving a like to content that you find interesting.<br>Thank you!</p>
+	</div>
+	<!-- code -->
+	<div *ngIf="activeInfo == '// code'" class="showIfSmallScreen" style="width:100%;text-align:center;font-size: 3vw;margin-bottom: 3vw;">
+		<p style="padding: 0;margin: 0;margin-top: 2vw; font-size: 5vw;font-weight: bold;">&darr; CLICK ME &darr;</p>
+	</div>
+	<div *ngIf="activeInfo == '// code'" id="codeContainer" class="codeContainer">
+		<a href="https://github.com/denthegreek/stohosShootingClub" target="_blank" (mouseenter)="codeTargetSetting('// Stohos //')"  (mouseleave)="codeTargetSetting('')">
+			<div id="stohos"  class="codeCard">
+				<div style="background: rgb(16,0,36);background: linear-gradient(135deg, rgba(16,0,36,1) 0%, rgba(48,9,121,1) 35%, rgba(0,8,120,1) 100%);width:100%;height: 15%;margin: 0;padding-top: 5%;text-align: center;font-size: 2.8vw;background-color: #1c1c1c;">
+					<img src="{{assetsPath}}assets/github/stohos_logo.png" style="height: 100%;background-repeat: no-repeat;background-color: transparent;">
+				</div>
+				<img src="{{assetsPath}}assets/github/stohos.png" style="width: 100%;height:100%;background-repeat: no-repeat;background-color: #1c1c1c;">
+			</div>
+		</a>
+		<a href="https://github.com/denthegreek/TaskManager" target="_blank" (mouseenter)="codeTargetSetting('// Task Manager //')"  (mouseleave)="codeTargetSetting('')">
+			<div id="taskManager"  class="codeCard">
+				<div style="background: rgb(16,0,36);background: linear-gradient(135deg, rgba(16,0,36,1) 0%, rgba(48,9,121,1) 35%, rgba(0,8,120,1) 100%);width:100%;height: 15%;margin: 0;padding-top: 5%;text-align: center;font-size: 2.8vw;background-color: #1c1c1c;">
+					<img src="{{assetsPath}}assets/github/taskManager_logo.png" style="height: 100%;background-repeat: no-repeat;background-color: transparent;">
+				</div>
+				<img src="{{assetsPath}}assets/github/taskManager.png" style="width: 100%;height:100%;background-repeat: no-repeat;background-color: #1c1c1c;">
+			</div>
+		</a>
+		<a href="https://github.com/denthegreek/myWebApp" target="_blank" (mouseenter)="codeTargetSetting('// This Website //')"  (mouseleave)="codeTargetSetting('')">
+			<div id="thisWebSite"  class="codeCard">
+				<div style="background: rgb(16,0,36);background: linear-gradient(135deg, rgba(16,0,36,1) 0%, rgba(48,9,121,1) 35%, rgba(0,8,120,1) 100%);width:100%;height: 15%;margin: 0;padding-top: 5%;text-align: center;font-size: 2.8vw;background-color: #1c1c1c;">
+					<img src="{{assetsPath}}assets/github/thisWebSite_logo.png" style="height: 100%;background-repeat: no-repeat;background-color: transparent;">
+				</div>
+				<img src="{{assetsPath}}assets/github/thisWebSite.png" style="width: 100%;height:100%;background-repeat: no-repeat;background-color: #1c1c1c;">
+			</div>
+		</a>
+	</div>
+	<div *ngIf="activeInfo == '// code'" class="showIfSmallScreen" style="width:100%;text-align: center;">
+		<div class="codeObjects" (click)="codeScroller('stohos')"> 
+			<img src="{{assetsPath}}assets/github/stohos_logo.png" style="width:14vw;">
+		</div>
+		<div class="codeObjects" (click)="codeScroller('taskManager')"> 
+			<img src="{{assetsPath}}assets/github/taskManager_logo.png" style="width:14vw;">
+		</div>
+		<div class="codeObjects" (click)="codeScroller('thisWebSite')"> 
+			<img src="{{assetsPath}}assets/github/thisWebSite_logo.png" style="width:14vw;">
+		</div>
+	</div>
+	<div *ngIf="activeInfo == '// code'" class="showIfBigScreen" style="height: 5vw;width:100%;text-align:center;font-size: 3vw;margin-top:0;padding-top: 0;">
+		<p style="padding: 0;margin: 0;margin-top: 0; font-size: 50%;">{{clickMeCode}}</p>
+		<p style="padding: 0;margin: 0;">{{codeTarget}}</p>
+	</div>
+	<!-- bottom section -->
+	<div *ngIf="activeInfo == '// home'" class="showIfBigScreen" style="animation: rgbLight2 4s infinite;position:fixed;bottom: 0;width:100%;text-align:center;border:none;padding-top: 5px;color: #8C62F1;background: {{whiteMode['gradBckgrnd1']}};background: {{whiteMode['gradBckgrnd2']}};">
+		<div style="width:10vw;display: inline-block;text-align: center;">
+			<a style="width:100%;color: purple;margin-right: 1vw;" target="_blank" href="https://github.com/denthegreek?tab=repositories">
+				<img style="height: 2vw;" src="{{assetsPath}}assets/social/github.png">
+			</a>
+		</div>
+		<div style="width:10vw;display: inline-block;text-align: center;">
+			<a style="width:100%;color: purple;margin-right: 1vw;" target="_blank"href="https://www.youtube.com/channel/UCrXUptg1qQ9styLQZJK_zNQ">
+				<img style="height: 2vw;" src="{{assetsPath}}assets/social/youtube.png">
+			</a>
+		</div>
+		<div style="width:10vw;display: inline-block;text-align: center;">
+			<a style="width:100%;color: purple;margin-right: 0;" target="_blank"href="https://www.linkedin.com/in/dimos-nikolakopoulos">
+				<img style="height: 2vw;" src="{{assetsPath}}assets/social/linkedin.png"> 
+			</a>
+		</div>
+	</div>
+</div>
