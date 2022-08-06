@@ -18,7 +18,7 @@ export class AppComponent {
 
 	currentSocialMedia="";
 
-	assetsPath="/denthegreek.github.io/";
+	assetsPath="";
 
 	whiteMode={
 		background : "#0000",
