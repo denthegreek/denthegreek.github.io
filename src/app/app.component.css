@@ -232,6 +232,138 @@
 	.videoObjects:active{
 		box-shadow:0 0 0 0.5vh #8C62F1;
 	}
+	.serviceDivision{
+		width: 30%;
+		height: 70vh;
+		display: inline-block;
+		box-shadow: 0 0 0.5vw 0 black;
+		box-sizing: border-box;
+		margin-top: 0.5vw;
+		border-radius: 10px;
+		position: relative;
+		overflow: hidden;
+		text-align: center;
+	}
+	.serviceDivision table, th, tr {
+	  border: 1px solid #404E62;
+	  border-collapse: collapse;
+	}
+	.serviceDivisionTitle{
+		height: 8vh;
+		margin:0;
+		padding:1.5vh 0 0;
+		width: 100%;
+		background-color: #404E62;
+		color:#879D9D;
+		box-sizing: border-box;
+		border-bottom: 0.3vw solid #879D9D;
+	}
+	.serviceItem{
+		padding: 0;
+		margin: 0;
+		background-color: #D4EBDE;
+		color: #404E62;
+		font-size: 80%;
+		cursor: pointer;
+		transition: background 0.25s, color 0.25s, filter 0.25s;
+		box-sizing: border-box;
+		display: table-cell;
+		vertical-align: middle;
+		user-select: none;
+	}
+	.serviceItem:hover{
+		background-color: #d4dbeb;
+		color:#405862;
+	}
+	.serviceItem:active{
+		filter: brightness(0.8);
+	}
+	.contactMe{
+		width: 50%;
+		background-color: #404E62;
+		color: white;
+		border-radius: 15vh;
+		font-size: 70%;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		margin-left: 25%;
+		cursor: pointer;
+		user-select: none;
+		box-sizing: border-box;
+		border: 2px solid #404E62;
+		transition: color 0.25s, background 0.25s;
+	}
+	.contactMe:hover{
+		background-color: #D4EBDE;
+		color: #404E62;
+		border: 2px solid #404E62;
+	}
+	.contactMeCard{
+		overflow: hidden;
+		width: 25%;
+		margin-left:37.5%;
+		height: 15vw;
+		background-color: #879D9D;
+		position: absolute;
+		top:-120vh;
+		border-radius: 10px;
+		z-index: 3;
+		box-shadow: 0 0 1vw black;
+		font-size: 1.1vw;
+		color: white;
+		transition: top 1.5s ease 0s;
+	}
+	.contactMeCard a{
+		color: white;
+	}
+	.contactMeCard a:active{
+		color: green;
+	}
+	.closeBtn{
+		padding: 0;
+		font-size: 2vw;
+		margin: 0 0.5vw 0;
+		color: #404E62;
+		position:absolute;
+		top: 0;
+		right: 0;
+		font-weight: bold;
+		transition: color 0.25s;
+		cursor: pointer;
+	}
+	.closeBtn:hover{
+		color: #879D9D;
+	}
+	.backBtn{
+		cursor: pointer;
+		padding:0 0.3vh 0;
+		margin:0;
+		background-color: #879D9D;
+		color:#404E62; 
+		position: absolute; 
+		top: 2vh;  
+		font-size: 3vh;
+		border-radius: 50%;
+		transition: color 0.25s, background-color 0.25s;
+		font-weight: bold;
+	}
+	.backBtn:hover{
+		background-color: #d4dbeb;
+		color:#405862;
+	}
+	.moduleItem{
+		padding: 0;
+		margin: 0;
+		background-color: #d4dbeb;
+		color: #405862;
+		font-size: calc(0.85vh + 0.85vw);
+		cursor: pointer;
+		transition: background 0.25s, color 0.25s, filter 0.25s;
+		box-sizing: border-box;
+		display: table-cell;
+		vertical-align: middle;
+		user-select: none;
+	}
 }
 
 @media (max-aspect-ratio: 10/7) {
@@ -242,8 +374,8 @@
 		display: inline-block;
 	}
   .position {
-    font-size: 5vw;
-    margin-top: 0;
+    font-size: 4vw;
+    margin-top: 3vw;
     margin-right: 10px;
     float: right;
   }
@@ -364,6 +496,141 @@
 	.videoObjects:active{
 		box-shadow:0 0 0 0.5vh #8C62F1;
 	}
+	.serviceDivision{
+		width: 100%;
+		height: 70vh;
+		display: inline-block;
+		box-shadow: 0 0 0.5vw 0 black;
+		box-sizing: border-box;
+		margin-top: 0.5vw;
+		position: relative;
+		overflow: hidden;
+		text-align: center;
+		font-size: 10vw;
+	}
+	.serviceDivision table, th, tr {
+	  border: 1px solid #404E62;
+	  border-collapse: collapse;
+	}
+	.serviceDivisionTitle{
+		height: 8vh;
+		margin:0;
+		padding:2.5vh 0 0;
+		width: 100%;
+		background-color: #404E62;
+		color:#879D9D;
+		box-sizing: border-box;
+		border-bottom: 0.3vw solid #879D9D;
+		font-size: 60%;
+	}
+	.serviceItem{
+		padding:  0;
+		margin: 0;
+		background-color: #D4EBDE;
+		color: #404E62;
+		font-size: 75%;
+		cursor: pointer;
+		transition: background 0.25s, color 0.25s, filter 0.25s;
+		box-sizing: border-box;
+		display: table-cell;
+		vertical-align: middle;
+		user-select: none;
+	}
+	.serviceItem:hover{
+		background-color: #d4dbeb;
+		color:#405862;
+	}
+	.serviceItem:active{
+		filter: brightness(0.8);
+	}
+	.contactMe{
+		width: 50%;
+		background-color: #404E62;
+		color: white;
+		border-radius: 15vh;
+		font-size: 8vw;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		margin-left: 25%;
+		cursor: pointer;
+		user-select: none;
+		box-sizing: border-box;
+		border: 2px solid #404E62;
+		transition: color 0.25s, background 0.25s;
+	}
+	.contactMe:hover{
+		background-color: #D4EBDE;
+		color: #404E62;
+		border: 2px solid #404E62;
+	}
+	.contactMeCard{
+		overflow: hidden;
+		width: 90%;
+		margin-left:5%;
+		height: 65vw;
+		background-color: #879D9D;
+		position: fixed;
+		top:-120vh;
+		border-radius: 10px;
+		z-index: 3;
+		box-shadow: 0 0 1vw black;
+		font-size: 4vw;
+		color: white;
+		transition: top 1.5s ease 0s;
+	}
+	.contactMeCard a{
+		color: white;
+	}
+	.contactMeCard a:active{
+		color: green;
+	}
+	.closeBtn{
+		padding: 0;
+		font-size: 6vw;
+		margin: 0 5vw 0;
+		color: #404E62;
+		position:absolute;
+		top: 0;
+		right: 0;
+		font-weight: bold;
+		transition: color 0.25s;
+		cursor: pointer;
+		user-select: none;
+	}
+	.closeBtn:hover{
+		color: #879D9D;
+	}
+	.backBtn{
+		cursor: pointer;
+		padding:0 0.3vh 0;
+		margin:0;
+		background-color: #879D9D;
+		color:#404E62; 
+		position: absolute; 
+		top: 2vh;  
+		font-size: 3vh;
+		border-radius: 50%;
+		transition: color 0.25s, background-color 0.25s;
+		font-weight: bold;
+		user-select: none;
+	}
+	.backBtn:hover{
+		background-color: #d4dbeb;
+		color:#405862;
+	}
+	.moduleItem{
+		padding: 0;
+		margin: 0;
+		background-color: #d4dbeb;
+		color: #405862;
+		font-size: 4.6vw;
+		cursor: pointer;
+		transition: background 0.25s, color 0.25s, filter 0.25s;
+		box-sizing: border-box;
+		display: table-cell;
+		vertical-align: middle;
+		user-select: none;
+	}
 }
  @keyframes aboutmeCard{
   0% {
@@ -385,5 +652,13 @@
 	}
 	100%{
 		opacity: 1;
+	}
+}
+@keyframes smooth_in_pannel{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 0.4;
 	}
 }
